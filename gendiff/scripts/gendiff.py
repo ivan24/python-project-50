@@ -1,4 +1,4 @@
-from gendiff.first_step import gendiff_parser
+from gendiff.cli import gendiff_parser
 
 
 def main():
