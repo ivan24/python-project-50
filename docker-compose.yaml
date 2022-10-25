@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  python:
+    build: .
+    volumes:
+      - .:/code
+    working_dir: /code
+    command:
+      - bash
