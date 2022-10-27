@@ -18,10 +18,7 @@ jobs:
           hexlet-id: ${{ secrets.HEXLET_ID }}
       - name: Run linter and pytest
         run: |
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v3.2.0
-        env:
-          CC_TEST_REPORTER_ID: <code_climate_reporter_id>
-        with:
-          coverageCommand: make test-coverage
-          debug: true
+      - name: Run pytest
+        run: PYTHONPATH=src/ poetry run python -m pytest -v --cov=src/ tests/
+      - name: Run Coverage
+        run: PYTHONPATH=src/ poetry run python -m coverage report -m;
