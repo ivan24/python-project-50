@@ -14,7 +14,7 @@ def path_file2():
 
 def test_file_difference():
     with open('tests/fixtures/etalon.txt', 'r') as file:
-        expected_file = file.readlines()
+        expected_file = file.read()
     result_file = generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json')
     assert result_file == str(expected_file)
 
