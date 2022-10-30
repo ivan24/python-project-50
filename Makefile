@@ -25,4 +25,4 @@ lint:
 coverage:
 	poetry run pytest --cov=gendiff
 
-.PHONY: install test test-coverage gendiff lint selfcheck check build publish
+.PHONY: install test test-coverage gendiff lint selfcheck check build publish coverage
