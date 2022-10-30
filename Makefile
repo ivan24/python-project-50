@@ -22,4 +22,7 @@ package-install:
 lint:
 	poetry run flake8 gendiff
 
+coverage:
+	poetry run pytest --cov=gendiff
+
 .PHONY: install test test-coverage gendiff lint selfcheck check build publish
